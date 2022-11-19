@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+    <title>Connect to Graph</title>
 </head>
 <body>
-<p> Hello World</p>
+    <form action="{{ url_for("index")}}" method="post">
+        <label for="host">Host:</label>
+        <input type="text" id="host" name="host" placeholder="bolt+ssc://catalog.pods.icicle.tapis.io:443">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="catalog">
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" placeholder="3hpnfBio0OJ5sHAF5ZzBUDWz0db90i">
+        <button type="submit">Connect</button>
+    </form>
 </body>
+<script>
+document.getElementById("host").value = "bolt+ssc://catalog.pods.icicle.tapis.io:443";
+document.getElementById("username").value = "catalog";
+document.getElementById("password").value = "3hpnfBio0OJ5sHAF5ZzBUDWz0db90i";
+
+</script>
 </html>
