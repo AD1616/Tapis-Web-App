@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Component Input</title>
 </head>
 <body>
-    <form action="{{ url_for("componentInput")}}" method="post">
-        <label for="component">Component:</label>
-        <input type="text" id="component" name="component" placeholder="">
-        <button type="submit">Enter</button>
-    </form>
+    <div class="center">
+        <form action="{{ url_for("componentInput")}}" method="post">
+            <label for="component">Component:</label>
+            <input type="text" id="component" name="component" placeholder="">
+            <button type="submit">Enter</button>
+        </form>
+    
+        {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+        {% endfor %}
+    </div>
 
-    {% for table in tables %}
-        {{titles[loop.index]}}
-        {{ table|safe }}
-    {% endfor %}
 </body>
 </html>

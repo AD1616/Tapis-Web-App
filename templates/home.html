@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Connect to Graph</title>
 </head>
 <body>
-    <form action="{{ url_for("index")}}" method="post">
-        <label for="host">Host:</label>
-        <input type="text" id="host" name="host" placeholder="bolt+ssc://catalog.pods.icicle.tapis.io:443">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="catalog">
-        <label for="password">Password:</label>
-        <input type="text" id="password" name="password" placeholder="3hpnfBio0OJ5sHAF5ZzBUDWz0db90i">
-        <button type="submit">Connect</button>
-    </form>
+    <div class="center">
+        <form action="{{ url_for("index")}}" method="post">
+            <label for="host">Host:</label>
+            <input type="text" id="host" name="host" placeholder="bolt+ssc://catalog.pods.icicle.tapis.io:443">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="catalog">
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" placeholder="3hpnfBio0OJ5sHAF5ZzBUDWz0db90i">
+            <button type="submit">Connect</button>
+        </form>
+    </div>
+
 </body>
 <script>
 document.getElementById("host").value = "bolt+ssc://catalog.pods.icicle.tapis.io:443";
