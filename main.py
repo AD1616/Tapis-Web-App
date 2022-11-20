@@ -38,7 +38,7 @@ def componentInput():
         if (df.empty):
             pass
         else:
-            return render_template("ComponentInput.html", tables=[df.to_html(classes='data')], titles=df.columns.values)
+            return render_template("ComponentInput.html", tables=[df.to_html(classes='data', header="true")])
     return render_template("ComponentInput.html")
 
 if __name__ == "__main__":

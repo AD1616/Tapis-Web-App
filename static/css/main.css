@@ -11,6 +11,12 @@
     padding: 10px;
 }
 
+.horizCenter {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
 html, body {
     font-family: Tahoma;
     max-height: 100%;

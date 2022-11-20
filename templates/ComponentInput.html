@@ -7,17 +7,30 @@
 </head>
 <body>
     <div class="center">
-        <form action="{{ url_for("componentInput")}}" method="post">
-            <label for="component">Component:</label>
-            <input type="text" id="component" name="component" placeholder="">
-            <button type="submit">Enter</button>
-        </form>
-    
-        {% for table in tables %}
-            {{titles[loop.index]}}
-            {{ table|safe }}
-        {% endfor %}
+        <div>
+            <form action="{{ url_for("componentInput")}}" method="post">
+                <label for="component">Component:</label>
+                <input type="text" id="component" name="component" placeholder="">
+                <button type="submit">Enter</button>
+            </form>      
+        </div>
+
+        <div class="horizCenter">
+            {% for table in tables %}
+                <div class="horizCenter">
+                    {{ table|safe }}
+                </div>
+            {% endfor %}
+        </div>
+
+
     </div>
 
+
+
 </body>
+<script>
+
+
+</script>
 </html>
