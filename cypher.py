@@ -7,7 +7,7 @@ def stringFormatter(original):
 
 def findComponent(component, graph):
     component = stringFormatter(component)
-    query = f"MATCH(n:COMPONENT) WHERE n.name={component} RETURN n.name"
+    query = f"MATCH(n:COMPONENT) WHERE n.name CONTAINS {component} RETURN n.name LIMIT 8"
     graph.run(query)
     return graph.run(query).to_data_frame()
 

@@ -5,3 +5,4 @@ __pycache__/app.cpython-310.pyc
 .idea/modules.xml
 .idea/misc.xml
 .idea/inspectionProfiles/profiles_settings.xml
+*.pyc
